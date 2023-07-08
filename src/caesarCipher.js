@@ -2,45 +2,17 @@ export default function ceaseCipher(str, key = 0) {
   if (typeof str !== "string" || typeof key !== "number") return "";
   if (key <= 0) return str;
 
-  const alphabet = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
-  return str
-    .split("")
-    .map((element) => {
-      if (element === " ") return " ";
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-      const capitalized = element === element.toUpperCase();
-      const letter = element.toLowerCase();
-      const letterIndex = alphabet.indexOf(letter);
-      const shiftedLetter = alphabet[(letterIndex + key) % alphabet.length];
+  return Array.from(str, (char) => {
+    if (char === " ") return " ";
 
-      return capitalized ? shiftedLetter.toUpperCase() : shiftedLetter;
-    })
-    .join("");
+    const isUppercase = char === char.toUpperCase();
+    const lowercaseChar = char.toLowerCase();
+    const letterIndex = alphabet.indexOf(lowercaseChar);
+    const shiftedIndex = (letterIndex + key) % alphabet.length;
+    const shiftedLetter = alphabet[shiftedIndex];
+
+    return isUppercase ? shiftedLetter.toUpperCase() : shiftedLetter;
+  }).join("");
 }
