@@ -1,8 +1,8 @@
 # Js testing practice
 
-``capitalize``: This function takes a string as input and returns a new string with the first letter capitalized. If the input is not a string, it returns `null`.
+``capitalize``: This function takes a string as input and returns a new string with the first letter capitalized. If the input is not a string, it returns an empty string.
 
-``reverseString``: This function takes a string as input and returns a new string with the characters reversed. If the input is not a string, it returns `null`.
+``reverseString``: This function takes a string as input and returns a new string with the characters reversed. If the input is not a string, it returns an empty string.
 
 ``calculator``: This object provides basic mathematical operations such as addition, subtraction, multiplication, and division. It ensures that both input arguments are numbers and returns the result of the operation. If either argument is not a number, it returns `NaN`.
 
