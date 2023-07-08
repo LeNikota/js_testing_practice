@@ -9,8 +9,8 @@ describe("calculator", () => {
     });
 
     test("should return NaN if any argument is not a number", () => {
-      expect(calculator.add({}, 5)).toBe(NaN);
-      expect(calculator.add("5", 5)).toBe(NaN);
+      expect(calculator.add({}, 5)).toBeNaN();
+      expect(calculator.add("5", 5)).toBeNaN();
     });
   });
 
@@ -22,8 +22,8 @@ describe("calculator", () => {
     });
 
     test("should return NaN if any argument is not a number", () => {
-      expect(calculator.subtract({}, 5)).toBe(NaN);
-      expect(calculator.subtract("5", 5)).toBe(NaN);
+      expect(calculator.subtract({}, 5)).toBeNaN();
+      expect(calculator.subtract("5", 5)).toBeNaN();
     });
   });
 
@@ -35,8 +35,8 @@ describe("calculator", () => {
     });
 
     test("should return NaN if any argument is not a number", () => {
-      expect(calculator.multiply({}, 5)).toBe(NaN);
-      expect(calculator.multiply("5", 5)).toBe(NaN);
+      expect(calculator.multiply({}, 5)).toBeNaN();
+      expect(calculator.multiply("5", 5)).toBeNaN();
     });
   });
 
@@ -48,12 +48,12 @@ describe("calculator", () => {
     });
 
     test("should return NaN if any argument is not a number", () => {
-      expect(calculator.divide({}, 5)).toBe(NaN);
-      expect(calculator.divide("5", 5)).toBe(NaN);
+      expect(calculator.divide({}, 5)).toBeNaN();
+      expect(calculator.divide("5", 5)).toBeNaN();
     });
 
     test("should return NaN if dividing by zero", () => {
-      expect(calculator.divide(5, 0)).toBe(NaN);
+      expect(calculator.divide(5, 0)).toBeNaN();
     });
   });
 });
