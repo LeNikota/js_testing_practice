@@ -21,6 +21,12 @@ describe("caesarCipher", () => {
     expect(caesarCipher("hello world", 3)).toBe("khoor zruog");
   });
 
+  test("wrapping from z to a", () => {
+    expect(caesarCipher("z", 1)).toBe("a");
+    expect(caesarCipher("z", 2)).toBe("b");
+    expect(caesarCipher("z", 26)).toBe("z");
+  });
+
   test("returns an empty string if arguments are not provided or invalid", () => {
     expect(caesarCipher()).toBe("");
     expect(caesarCipher({}, 5)).toBe("");
