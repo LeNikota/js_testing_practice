@@ -1,5 +1,5 @@
 export default function ceaseCipher(str, key = 0) {
-  if (typeof str !== "string" || typeof key !== 'number') return "";
+  if (typeof str !== "string" || typeof key !== "number") return "";
   if (key <= 0) return str;
 
   const alphabet = [
